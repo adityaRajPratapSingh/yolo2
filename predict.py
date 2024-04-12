@@ -3,7 +3,6 @@ import os
 from ultralytics import YOLO
 import cv2
 
-
 VIDEOS_DIR = os.path.join('.', 'videos')
 
 video_path = os.path.join(VIDEOS_DIR, '1.mp4')
@@ -14,8 +13,8 @@ ret, frame = cap.read()
 H, W, _ = frame.shape
 out = cv2.VideoWriter(video_path_out, cv2.VideoWriter_fourcc(*'MP4V'), int(cap.get(cv2.CAP_PROP_FPS)), (W, H))
 
-#model_path = os.path.join('.', 'runs', 'detect', 'train', 'weights', 'last.pt')
-model_path = 'yolov8n.pt'
+model_path = os.path.join('.', 'runs', 'detect', 'train6', 'weights', 'last.pt')
+#model_path = 'yolov8n.pt'
 
 # Load a model
 model = YOLO(model_path)  # load a custom model

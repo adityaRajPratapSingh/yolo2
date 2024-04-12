@@ -38,7 +38,7 @@ for xml_file in os.listdir(xml_dir):
         with open(os.path.join(yolo_dir, yolo_filename), 'w') as yolo_file:
             # Iterate over object annotations
             for obj in root.findall('object'):
-                #class_name = obj.find('name').text
+                class_name = obj.find('name').text
                 # Convert bounding box coordinates to YOLO format
                 bbox = obj.find('bndbox')
                 x_min = int(bbox.find('xmin').text)
@@ -46,5 +46,5 @@ for xml_file in os.listdir(xml_dir):
                 x_max = int(bbox.find('xmax').text)
                 y_max = int(bbox.find('ymax').text)
                 yolo_line = convert_to_yolo_format(x_min, y_min, x_max, y_max, image_width, image_height)
-                #yolo_file.write(f"{class_name} {yolo_line}")
-                yolo_file.write(f"{yolo_line}")
+                yolo_file.write(f"{class_name} {yolo_line}")
+                #yolo_file.write(f"{yolo_line}")
