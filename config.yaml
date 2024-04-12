@@ -1,0 +1,12 @@
+#this is the yaml config file using the yaml format
+
+path: D:\Apps\yolo2\yolo2\data #dataset root directory
+train: images\train  #relative to the root, path of trainaing images
+val: images\train  #relative to the root, path of the validation images
+
+
+#class names
+
+names:
+  0 : mask   #you need to have space after and before : otherwise there will be errors
+
