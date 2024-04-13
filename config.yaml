@@ -8,5 +8,6 @@ val: images\train  #relative to the root, path of the validation images
 #class names
 
 names:
-  0 : mask   #you need to have space after and before : otherwise there will be errors
-
+  0 : card   #you need to have space after and before : otherwise there will be errors
+  1 : band
+  2 : person
